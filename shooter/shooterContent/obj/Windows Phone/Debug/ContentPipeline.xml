@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>character.png</Source>
+      <Name>character</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\bas\documents\visual studio 2010\Projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\character.xnb</Output>
+      <Time>2011-02-05T19:17:49.0723222+07:00</Time>
+    </Item>
+    <Item>
+      <Source>character2.png</Source>
+      <Name>character2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\bas\documents\visual studio 2010\Projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\character2.xnb</Output>
+      <Time>2011-02-07T02:14:34.3249285+07:00</Time>
+    </Item>
+    <Item>
+      <Source>logo.png</Source>
+      <Name>logo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\bas\documents\visual studio 2010\Projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\logo.xnb</Output>
+      <Time>2011-02-05T20:22:16.6045324+07:00</Time>
+    </Item>
+    <Item>
+      <Source>font1.spritefont</Source>
+      <Name>font1</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\bas\documents\visual studio 2010\Projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\font1.xnb</Output>
+      <Time>2011-02-07T18:44:15.2061442+07:00</Time>
+    </Item>
+    <Item>
+      <Source>l.png</Source>
+      <Name>l</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\bas\documents\visual studio 2010\Projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\l.xnb</Output>
+      <Time>2011-02-05T21:07:48.5707919+07:00</Time>
+    </Item>
+    <Item>
+      <Source>r.png</Source>
+      <Name>r</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\bas\documents\visual studio 2010\Projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\r.xnb</Output>
+      <Time>2011-02-05T21:08:04.1316819+07:00</Time>
+    </Item>
+    <Item>
+      <Source>j.png</Source>
+      <Name>j</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\bas\documents\visual studio 2010\Projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\j.xnb</Output>
+      <Time>2011-02-05T21:08:33.6933728+07:00</Time>
+    </Item>
+    <Item>
+      <Source>f.png</Source>
+      <Name>f</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\bas\documents\visual studio 2010\Projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\f.xnb</Output>
+      <Time>2011-02-05T21:08:18.573508+07:00</Time>
+    </Item>
+    <Item>
+      <Source>p.png</Source>
+      <Name>p</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\bas\documents\visual studio 2010\Projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\p.xnb</Output>
+      <Time>2011-02-06T01:04:22.1006154+07:00</Time>
+    </Item>
+    <Item>
+      <Source>e.png</Source>
+      <Name>e</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\bas\documents\visual studio 2010\Projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\e.xnb</Output>
+      <Time>2011-02-06T01:05:26.9143225+07:00</Time>
+    </Item>
+    <Item>
+      <Source>cannon.png</Source>
+      <Name>cannon</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\bas\documents\visual studio 2010\Projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\cannon.xnb</Output>
+      <Time>2011-02-06T01:10:11.8916223+07:00</Time>
+    </Item>
+    <Item>
+      <Source>ball.png</Source>
+      <Name>ball</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\BAS\documents\visual studio 2010\Projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\ball.xnb</Output>
+      <Time>2011-02-06T23:01:25.7009867+07:00</Time>
+    </Item>
+    <Item>
+      <Source>bg2.png</Source>
+      <Name>bg2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\BAS\documents\visual studio 2010\Projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\bg2.xnb</Output>
+      <Time>2011-02-03T12:04:26.3666483+07:00</Time>
+    </Item>
+    <Item>
+      <Source>ef.png</Source>
+      <Name>ef</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\BAS\documents\visual studio 2010\Projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\ef.xnb</Output>
+      <Time>2011-02-03T11:44:45.7725099+07:00</Time>
+    </Item>
+    <Item>
+      <Source>eg.png</Source>
+      <Name>eg</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\BAS\documents\visual studio 2010\Projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\eg.xnb</Output>
+      <Time>2011-02-02T17:39:29.1920406+07:00</Time>
+    </Item>
+    <Item>
+      <Source>bg.jpg</Source>
+      <Name>bg</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\BAS\documents\visual studio 2010\Projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\bg.xnb</Output>
+      <Time>2011-02-06T20:49:10.644733+07:00</Time>
+    </Item>
+    <Item>
+      <Source>power.png</Source>
+      <Name>power</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\BAS\documents\visual studio 2010\Projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\power.xnb</Output>
+      <Time>2011-02-06T21:02:39.9715708+07:00</Time>
+    </Item>
+    <Item>
+      <Source>arrow.png</Source>
+      <Name>arrow</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\BAS\documents\visual studio 2010\Projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\arrow.xnb</Output>
+      <Time>2011-02-06T22:02:51.1388999+07:00</Time>
+    </Item>
+    <Item>
+      <Source>ball2.png</Source>
+      <Name>ball2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\BAS\documents\visual studio 2010\Projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\ball2.xnb</Output>
+      <Time>2011-02-06T23:08:19.6225454+07:00</Time>
+    </Item>
+    <Item>
+      <Source>cop.png</Source>
+      <Name>cop</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\BAS\documents\visual studio 2010\Projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\cop.xnb</Output>
+      <Time>2011-02-07T01:36:06.0819822+07:00</Time>
+    </Item>
+    <Item>
+      <Source>cop2.png</Source>
+      <Name>cop2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\BAS\documents\visual studio 2010\Projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\cop2.xnb</Output>
+      <Time>2011-02-07T01:46:54.582838+07:00</Time>
+    </Item>
+    <Item>
+      <Source>miss.png</Source>
+      <Name>miss</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\BAS\documents\visual studio 2010\Projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\miss.xnb</Output>
+      <Time>2011-02-07T13:39:54.9653675+07:00</Time>
+    </Item>
+    <Item>
+      <Source>char.png</Source>
+      <Name>char</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\BAS\documents\visual studio 2010\Projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\char.xnb</Output>
+      <Time>2011-02-07T18:15:37.2754265+07:00</Time>
+    </Item>
+    <Item>
+      <Source>over.png</Source>
+      <Name>over</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\BAS\documents\visual studio 2010\Projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\over.xnb</Output>
+      <Time>2011-02-07T19:28:47.0924943+07:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>WindowsPhone</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\BAS\documents\visual studio 2010\Projects\shooter\shooter\shooterContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\BAS\documents\visual studio 2010\Projects\shooter\shooter\shooter\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\BAS\documents\visual studio 2010\Projects\shooter\shooter\shooterContent\obj\Windows Phone\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\BAS\documents\visual studio 2010\Projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T12:41:18+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T12:41:18+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2011-01-27T03:06:13.7659335+07:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
