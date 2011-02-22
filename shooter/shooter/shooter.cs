@@ -16,10 +16,10 @@ namespace shooter
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        show bg, ch, logo, l, r, f, j, e, eg, cannon, ball, power, arrow,ef,charr,over;
+        show bg, ch, logo, l, r, f, j, e, eg, cannon, ball, power, arrow,ef,charr,over,boom,wel,level,die;
         int x, y,xx,yy,lv=1,step=0,e1=0,e2=0,at1=0,at2=0,m=0,cha=3,hp=100,exp=0,pi=0;
         float c = 0.0f, cc = 0.0f;
-        bool fire = false,start = true,eff = false;
+        bool fire = false,start = true,eff = false,boomm = false,enter=false,levell=false,diee=false;
         int [] at_cop = new int[10];
         int[] at_mis = new int[10];
         SpriteFont font;
@@ -56,6 +56,10 @@ namespace shooter
             logo.Position = new Vector2(200, 50);
             charr = new show(Content, "char");
             charr.Position = new Vector2(570,20);
+            boom = new show(Content, "boom");
+            level = new show(Content, "level");
+            wel = new show(Content, "welcome");
+            die = new show(Content, "die");
             l = new show(Content, "l");
             r = new show(Content, "r");
             j = new show(Content, "p");
@@ -95,12 +99,42 @@ namespace shooter
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
-            character();
 
-            if (fire)
-                firer();
+            if (enter)
+            {
+                character();
 
-            copter();
+                if (fire)
+                    firer();
+
+                copter();
+
+                if (boomm)
+                    boomr();
+
+
+                if (levell)
+                    levelr();
+
+                if (diee)
+                    dier();
+            }
+            else
+            {
+                TouchCollection touchCollection = TouchPanel.GetState();
+                foreach (TouchLocation tl in touchCollection)
+                {
+                    x = (int)tl.Position.X;
+                    y = (int)tl.Position.Y;
+                    if ((tl.State == TouchLocationState.Pressed) || (tl.State == TouchLocationState.Moved))
+                    {
+                        if ((x > 218 && x < 460) && (y>302&&y<390))
+                        {
+                            enter = true;
+                        }
+                    }
+                }
+            }
 
             base.Update(gameTime);
         }
@@ -108,6 +142,14 @@ namespace shooter
         {
             GraphicsDevice.Clear(Color.Black);
             spriteBatch.Begin();
+
+            if (!enter)
+            {
+                spriteBatch.Draw(wel.Texture, wel.Position, null, Color.White, wel.Rotation, wel.Origin, 2.0f, wel.eff, 0.0f);
+            }
+           // spriteBatch.DrawString(font, x + "--" + y, new Vector2(200, 200), Color.White);
+
+            if (enter)
             if (cha > 0)
             {
                 spriteBatch.Draw(bg.Texture, bg.Position, null, Color.White, bg.Rotation, bg.Origin, 2.0f, bg.eff, 0.0f);
@@ -153,6 +195,11 @@ namespace shooter
                             if (exp >= 100)
                             {
                                 lv++;
+
+                                levell = true;
+                                level.Display = true;
+                                level.Position = ch.Position;
+
                                 if (lv % 5 == 0)
                                 {
                                     cha++;
@@ -186,14 +233,22 @@ namespace shooter
                                 if (misr[cc].Intersects(boxr[4]))
                                 {
                                     hp -= 10;
+                                    boomm = true;
+                                    boom.Display = true;
+                                  
                                     if (hp <= 0)
                                     {
                                         cha--;
+
+                                        diee = true;
+                                        die.Display = true;
+                                        die.Position = ch.Position;
+
                                         hp = 100;
                                     }
                                     at1 = (int)ch.Position.X;
                                     at2 = (int)ch.Position.Y;
-
+                                    boom.Position = new Vector2(at1,at2);
                                 }
                                 else
                                 {
@@ -231,12 +286,12 @@ namespace shooter
                 spriteBatch.Draw(j.Texture, j.Position, null, Color.White, j.Rotation, j.Origin, 1.0f, j.eff, 0.0f);
                 spriteBatch.Draw(e.Texture, e.Position, null, Color.White, e.Rotation, e.Origin, 1.0f, e.eff, 0.0f);
                 spriteBatch.Draw(f.Texture, f.Position, null, Color.White, f.Rotation, f.Origin, 1.0f, f.eff, 0.0f);
-               // spriteBatch.DrawString(font, x + "--" + y, new Vector2(200, 200), Color.White);
                 spriteBatch.Draw(charr.Texture, charr.Position, null, Color.White, charr.Rotation, charr.Origin, 1.0f, charr.eff, 0.0f);
                 spriteBatch.DrawString(font, "Level " + lv + " Exp " + exp + " Hp " + hp + " Character " + cha + "  X  ", new Vector2(300, 5), Color.White);
                 spriteBatch.DrawString(font, "Point " + pi, new Vector2(300, 25), Color.White);
                 spriteBatch.DrawString(font, " " + (int)((-100 * c) / 1.7361) + " D e g r e e ", new Vector2(100, 5), Color.White);
-                box();
+
+               box();
 
                 if (ball.Display)
                     spriteBatch.Draw(ball.Texture, ball.Position, null, Color.White, ball.Rotation, ball.Origin, 1.0f, ball.eff, 0.0f);
@@ -251,6 +306,17 @@ namespace shooter
                 over.Position = new Vector2(450,200);
                 spriteBatch.Draw(over.Texture, over.Position, null, Color.White, over.Rotation, over.Origin, 1.0f, over.eff, 0.0f);
             }
+
+
+            if (boom.Display)
+                spriteBatch.Draw(boom.Texture, boom.Position, null, Color.White, boom.Rotation, boom.Origin, 1.0f, boom.eff, 0.0f);
+
+            if (level.Display)
+                spriteBatch.Draw(level.Texture, level.Position, null, Color.White, level.Rotation, level.Origin, 1.0f, level.eff, 0.0f);
+
+            if (die.Display)
+                spriteBatch.Draw(die.Texture, die.Position, null, Color.White, die.Rotation, die.Origin, 1.0f, die.eff, 0.0f);
+
                 spriteBatch.End();
             base.Draw(gameTime);
         } 
@@ -271,6 +337,7 @@ namespace shooter
         public void character()
         {
             TouchCollection touchCollection = TouchPanel.GetState();
+
             foreach (TouchLocation tl in touchCollection)
             {
                 x = (int)tl.Position.X;
@@ -351,6 +418,46 @@ namespace shooter
 
         }
 
+
+        public void boomr()
+        {
+            boom.Display = true;
+            boom.Position -= new Vector2(0, 1);
+
+            if (boom.Position.Y<300)
+            {
+                boom.Display = false;
+                boomm = false;
+            }
+
+        }
+
+
+        public void levelr()
+        {
+            level.Display = true;
+            level.Position -= new Vector2(0, 1);
+
+            if (level.Position.Y < 300)
+            {
+                level.Display = false;
+                levell = false;
+            }
+
+        }
+
+        public void dier()
+        {
+            die.Display = true;
+            die.Position -= new Vector2(0, 1);
+
+            if (die.Position.Y < 300)
+            {
+                die.Display = false;
+                diee = false;
+            }
+
+        }
         public void copter()
         {
             int cc = 0;

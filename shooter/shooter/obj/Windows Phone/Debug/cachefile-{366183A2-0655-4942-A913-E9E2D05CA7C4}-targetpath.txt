@@ -1,7 +1,6 @@
 Content\character.xnb
 Content\character2.xnb
 Content\logo.xnb
-Content\font1.xnb
 Content\l.xnb
 Content\r.xnb
 Content\j.xnb
@@ -22,3 +21,9 @@ Content\cop2.xnb
 Content\miss.xnb
 Content\char.xnb
 Content\over.xnb
+Content\font1.xnb
+Content\ballx.xnb
+Content\boom.xnb
+Content\welcome.xnb
+Content\level.xnb
+Content\die.xnb
