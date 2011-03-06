@@ -17,9 +17,9 @@ namespace shooter
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         show bg, ch, logo, l, r, f, j, e, eg, cannon, ball, power, arrow,ef,charr,over,boom,wel,level,die;
-        int x, y,xx,yy,lv=1,step=0,e1=0,e2=0,at1=0,at2=0,m=0,cha=3,hp=100,exp=0,pi=0;
+        int x, y,lv=1,step=0,m=0,e1=0,e2=0,at1=0,at2=0,cha=3,hp=100,exp=0,pi=0;
         float c = 0.0f, cc = 0.0f;
-        bool fire = false,start = true,eff = false,boomm = false,enter=false,levell=false,diee=false;
+        bool fire = false,eff = false,boomm = false,enter=false,levell=false,diee=false;
         int [] at_cop = new int[10];
         int[] at_mis = new int[10];
         SpriteFont font;
@@ -34,13 +34,11 @@ namespace shooter
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             TargetElapsedTime = TimeSpan.FromTicks(333333);
-
         }
         protected override void Initialize()
         {
             base.Initialize();
         }
-
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
@@ -93,7 +91,6 @@ namespace shooter
           }
         protected override void UnloadContent()
         {
-
         }
         protected override void Update(GameTime gameTime)
         {
@@ -103,19 +100,13 @@ namespace shooter
             if (enter)
             {
                 character();
-
                 if (fire)
                     firer();
-
                 copter();
-
                 if (boomm)
                     boomr();
-
-
                 if (levell)
                     levelr();
-
                 if (diee)
                     dier();
             }
@@ -135,20 +126,16 @@ namespace shooter
                     }
                 }
             }
-
             base.Update(gameTime);
         }
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.Black);
             spriteBatch.Begin();
-
             if (!enter)
             {
                 spriteBatch.Draw(wel.Texture, wel.Position, null, Color.White, wel.Rotation, wel.Origin, 2.0f, wel.eff, 0.0f);
             }
-           // spriteBatch.DrawString(font, x + "--" + y, new Vector2(200, 200), Color.White);
-
             if (enter)
             if (cha > 0)
             {
@@ -173,7 +160,6 @@ namespace shooter
                 {
                     if (sha.Display && at_cop[cc] != 1)
                     {
-                        //spriteBatch.DrawString(font, "("+sha.Position.X+","+sha.Position.Y+") to "+"("+sha.target.X+","+sha.target.Y+") missi "+m, sha.Position-new Vector2(10,50), Color.White);
                         spriteBatch.Draw(sha.Texture, sha.Position, new Rectangle(step * 100, 0, 100, sha.Texture.Height), Color.White, sha.Rotation, sha.Origin, 1.0f, sha.eff, 0.0f);
                         copr[cc] = new Rectangle((int)sha.Position.X, (int)sha.Position.Y, 100, (int)sha.Texture.Height);
                         if (shows2[cc].Display)
@@ -195,11 +181,9 @@ namespace shooter
                             if (exp >= 100)
                             {
                                 lv++;
-
                                 levell = true;
                                 level.Display = true;
                                 level.Position = ch.Position;
-
                                 if (lv % 5 == 0)
                                 {
                                     cha++;
@@ -207,7 +191,6 @@ namespace shooter
                                 exp = 0;
                             }
                         }
-
                         if (!(shows2[cc].Display))
                         {
                             Random ry = new Random();
@@ -224,9 +207,8 @@ namespace shooter
                         else
                         {
                             m = 1;
-                            shows2[cc].Position += new Vector2(1, 1 * 1 + (int)(((float)lv / 2.0)));
+                            shows2[cc].Position += new Vector2(0, 1 * 1 + (int)(((float)lv / 2.0)));
                             misr[cc].Y += 1 * 1 + (int)(((float)lv / 2.0));
-                            misr[cc].X += 1;
 
                             if (misr[cc].Y > 480 || misr[cc].Intersects(boxr[4]))
                             {
@@ -235,15 +217,12 @@ namespace shooter
                                     hp -= 10;
                                     boomm = true;
                                     boom.Display = true;
-                                  
                                     if (hp <= 0)
                                     {
                                         cha--;
-
                                         diee = true;
                                         die.Display = true;
                                         die.Position = ch.Position;
-
                                         hp = 100;
                                     }
                                     at1 = (int)ch.Position.X;
@@ -268,14 +247,10 @@ namespace shooter
                     }
                     cc++;
                 }
-
                 effect();
-
-                //spriteBatch.Draw(cannon.Texture, cannon.Position, null, Color.White, cannon.Rotation, cannon.Origin, 1.0f, cannon.eff, 0.0f);
                 spriteBatch.Draw(ch.Texture, ch.Position, new Rectangle(ch.step * 60, 0, 60, 77), Color.White, ch.Rotation, ch.Origin, 1.0f, ch.eff, 0.0f);
                 cannon.Position = ch.Position - new Vector2(155, -5);
                 cannon.Origin = new Vector2(5, 60);
-                //spriteBatch.Draw(logo.Texture, logo.Position, null, Color.White, logo.Rotation, logo.Origin, 2.0f, SpriteEffects.None, 0.0f);
                 r.Position = new Vector2(750, 380);
                 l.Position = new Vector2(50, 380);
                 j.Position = new Vector2(50, 50);
@@ -290,12 +265,9 @@ namespace shooter
                 spriteBatch.DrawString(font, "Level " + lv + " Exp " + exp + " Hp " + hp + " Character " + cha + "  X  ", new Vector2(300, 5), Color.White);
                 spriteBatch.DrawString(font, "Point " + pi, new Vector2(300, 25), Color.White);
                 spriteBatch.DrawString(font, " " + (int)((-100 * c) / 1.7361) + " D e g r e e ", new Vector2(100, 5), Color.White);
-
-               box();
-
+                box();
                 if (ball.Display)
-                    spriteBatch.Draw(ball.Texture, ball.Position, null, Color.White, ball.Rotation, ball.Origin, 1.0f, ball.eff, 0.0f);
-
+                spriteBatch.Draw(ball.Texture, ball.Position, null, Color.White, ball.Rotation, ball.Origin, 1.0f, ball.eff, 0.0f);
                 power.Position = new Vector2(150, 85);
                 spriteBatch.Draw(power.Texture, power.Position, null, Color.White, power.Rotation, power.Origin, 1.0f, power.eff, 0.0f);
                 arrow.Origin = new Vector2(0, 8);
@@ -306,8 +278,6 @@ namespace shooter
                 over.Position = new Vector2(450,200);
                 spriteBatch.Draw(over.Texture, over.Position, null, Color.White, over.Rotation, over.Origin, 1.0f, over.eff, 0.0f);
             }
-
-
             if (boom.Display)
                 spriteBatch.Draw(boom.Texture, boom.Position, null, Color.White, boom.Rotation, boom.Origin, 1.0f, boom.eff, 0.0f);
 
@@ -317,7 +287,7 @@ namespace shooter
             if (die.Display)
                 spriteBatch.Draw(die.Texture, die.Position, null, Color.White, die.Rotation, die.Origin, 1.0f, die.eff, 0.0f);
 
-                spriteBatch.End();
+            spriteBatch.End();
             base.Draw(gameTime);
         } 
         public void box()
@@ -406,7 +376,6 @@ namespace shooter
         public void firer()
         {
             ball.Display = true;
-          //  (int)((-100 * c) / 1.7361);
             ball.Position += new Vector2(10 * (float)Math.Cos(cc), 10 * (float)Math.Sin(cc));
 
            if (!(boxr[0].Intersects(boxr[3])))
@@ -415,10 +384,7 @@ namespace shooter
               ball.Display = false;
               fire = false;
             }
-
         }
-
-
         public void boomr()
         {
             boom.Display = true;
@@ -429,10 +395,7 @@ namespace shooter
                 boom.Display = false;
                 boomm = false;
             }
-
         }
-
-
         public void levelr()
         {
             level.Display = true;
@@ -443,9 +406,7 @@ namespace shooter
                 level.Display = false;
                 levell = false;
             }
-
         }
-
         public void dier()
         {
             die.Display = true;
@@ -456,7 +417,6 @@ namespace shooter
                 die.Display = false;
                 diee = false;
             }
-
         }
         public void copter()
         {
@@ -525,7 +485,5 @@ namespace shooter
                 }
             }
         }
-
-    }
-  
+    }  
 }

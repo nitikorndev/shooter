@@ -74,3 +74,9 @@ C:\cygwin\home\BAS\projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Cont
 C:\cygwin\home\BAS\projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\welcome.xnb
 C:\cygwin\home\BAS\projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\level.xnb
 C:\cygwin\home\BAS\projects\shooter\shooter\shooter\bin\Windows Phone\Debug\Content\die.xnb
+C:\cygwin\home\BAS\projects\shooter\shooter\shooter\bin\Windows Phone\Debug\shooter.xap
+C:\cygwin\home\BAS\projects\shooter\shooter\shooter\obj\Windows Phone\Debug\XapCacheFile.xml
+C:\cygwin\home\BAS\projects\shooter\shooter\shooter\bin\Windows Phone\Debug\AppManifest.xaml
+C:\cygwin\home\BAS\projects\shooter\shooter\shooter\obj\Windows Phone\Debug\WMAppManifest.xml.g
+C:\cygwin\home\BAS\projects\shooter\shooter\shooter\obj\Windows Phone\Debug\WMAppManifest.xml
+bin\Windows Phone\Debug\GameThumbnail.png
