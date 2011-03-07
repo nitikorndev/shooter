@@ -272,13 +272,8 @@ namespace shooter
                 spriteBatch.Draw(power.Texture, power.Position, null, Color.White, power.Rotation, power.Origin, 1.0f, power.eff, 0.0f);
                 arrow.Origin = new Vector2(0, 8);
                 spriteBatch.Draw(arrow.Texture, power.Position, null, Color.White, arrow.Rotation, arrow.Origin, 1.0f, arrow.eff, 0.0f);
-            }
-            else
-            {
-                over.Position = new Vector2(450,200);
-                spriteBatch.Draw(over.Texture, over.Position, null, Color.White, over.Rotation, over.Origin, 1.0f, over.eff, 0.0f);
-            }
-            if (boom.Display)
+            
+             if (boom.Display)
                 spriteBatch.Draw(boom.Texture, boom.Position, null, Color.White, boom.Rotation, boom.Origin, 1.0f, boom.eff, 0.0f);
 
             if (level.Display)
@@ -286,6 +281,16 @@ namespace shooter
 
             if (die.Display)
                 spriteBatch.Draw(die.Texture, die.Position, null, Color.White, die.Rotation, die.Origin, 1.0f, die.eff, 0.0f);
+            
+            }
+            else
+            {
+                over.Position = new Vector2(450,200);
+                
+                spriteBatch.Draw(over.Texture, over.Position, null, Color.White, over.Rotation, over.Origin, 1.0f, over.eff, 0.0f);
+                spriteBatch.DrawString(font, "Total Point " + pi, new Vector2(400, 300), Color.White);
+                spriteBatch.DrawString(font, "Reply Again Please Click here ", new Vector2(400, 320), Color.White);
+            }
 
             spriteBatch.End();
             base.Draw(gameTime);
@@ -314,6 +319,13 @@ namespace shooter
                 y = (int)tl.Position.Y;
                 if ((tl.State == TouchLocationState.Pressed) || (tl.State == TouchLocationState.Moved))
                 {
+                    if (cha < 1)
+                    {
+                        cha = 3; 
+                        pi = 0;
+                        exp = 0;
+                        lv = 1;
+                    }
                     if ((x > 724 && x < 774) && (y > 360 && y < 400))
                     {//เดินหน้า
                         ch.eff = SpriteEffects.None;
